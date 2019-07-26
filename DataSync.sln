@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync", "src\DataSync\DataSync.csproj", "{11C043D3-56D1-4A10-8533-07D492A770B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.Core", "src\DataSync.Core\DataSync.Core.csproj", "{90FD4BC4-E2FE-4415-8D44-DA8CA405C19E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{1BD4ECB6-926F-4BE6-A9C0-506AF59A37C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.MySqlReader", "src\DataSync.MySqlReader\DataSync.MySqlReader.csproj", "{5034E77F-525C-4BDD-A689-67A07F3BDAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.MySqlWriter", "src\DataSync.MySqlWriter\DataSync.MySqlWriter.csproj", "{7622AAA1-0858-4E1A-A529-F975BD0EB1EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D87E096-6F25-451E-9302-DD80C3D469D7}"
+ProjectSection(SolutionItems) = preProject
+	define.json = define.json
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.CsvWriter", "src\DataSync.CsvWriter\DataSync.CsvWriter.csproj", "{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C043D3-56D1-4A10-8533-07D492A770B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C043D3-56D1-4A10-8533-07D492A770B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C043D3-56D1-4A10-8533-07D492A770B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C043D3-56D1-4A10-8533-07D492A770B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FD4BC4-E2FE-4415-8D44-DA8CA405C19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FD4BC4-E2FE-4415-8D44-DA8CA405C19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FD4BC4-E2FE-4415-8D44-DA8CA405C19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FD4BC4-E2FE-4415-8D44-DA8CA405C19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5034E77F-525C-4BDD-A689-67A07F3BDAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5034E77F-525C-4BDD-A689-67A07F3BDAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5034E77F-525C-4BDD-A689-67A07F3BDAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5034E77F-525C-4BDD-A689-67A07F3BDAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7622AAA1-0858-4E1A-A529-F975BD0EB1EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7622AAA1-0858-4E1A-A529-F975BD0EB1EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7622AAA1-0858-4E1A-A529-F975BD0EB1EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7622AAA1-0858-4E1A-A529-F975BD0EB1EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5034E77F-525C-4BDD-A689-67A07F3BDAFF} = {1BD4ECB6-926F-4BE6-A9C0-506AF59A37C7}
+		{7622AAA1-0858-4E1A-A529-F975BD0EB1EB} = {1BD4ECB6-926F-4BE6-A9C0-506AF59A37C7}
+		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C} = {1BD4ECB6-926F-4BE6-A9C0-506AF59A37C7}
+	EndGlobalSection
+EndGlobal

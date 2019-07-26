@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "concurrent": 1,
+  "sync": [
+    {
+      "reader": {
+        "type": "mysql",
+        "host": "locahost",
+        "port": 3306,
+        "user": "root",
+        "password": "1qazZAQ!",
+        "database": "data",
+        "table": [
+          {
+            "name": "news",
+            "splitPk": "id",
+            "where": "",
+            "column": [
+              "id",
+              "title"
+            ]
+          }
+        ],
+        "sql": []
+      },
+      "writer": {
+        "type": "csv",
+        "encoding": "utf-8",
+        "folder": "/storage/var/lib/datasync/zhaoshu"
+      }
+    }
+  ]
+}
