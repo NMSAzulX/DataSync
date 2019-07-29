@@ -4,12 +4,13 @@ using System.IO;
 using System.Threading.Tasks;
 using DataSync.Core.Config;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace DataSync.Core
 {
     public class SyncFlow
     {
-        private readonly Dictionary<string, IDataSyncReader> _readerDict = new Dictionary<string, IDataSyncReader>();
+        private readonly Dictionary<string, Type> _readerDict = new Dictionary<string, Type>();
         private readonly Dictionary<string, Type> _writerDict = new Dictionary<string, Type>();
 
         public Task RunAsync(string file)
@@ -28,7 +29,7 @@ namespace DataSync.Core
                 if (readerBaseType.IsAssignableFrom(type))
                 {
                     var reader = (IDataSyncReader) Activator.CreateInstance(type);
-                    _readerDict.Add(reader.Name, reader);
+                    _readerDict.Add(reader.Name, type);
                 }
             }
 
@@ -40,6 +41,15 @@ namespace DataSync.Core
             
             if (dataSync.Sync.Count > 0)
             {
+                var obj = JsonConvert.DeserializeObject<JObject>(json);
+                foreach (var config in dataSync.Sync)
+                {
+                    var readerType = config.Reader.Type;
+                    var writerType = config.Writer.Type;
+                    var reader = _readerDict[readerType];
+                    var writer = _writerDict[writerType];
+
+                }
                 Parallel.ForEach(dataSync.Sync, new ParallelOptions
                 {
                     MaxDegreeOfParallelism = dataSync.Concurrent

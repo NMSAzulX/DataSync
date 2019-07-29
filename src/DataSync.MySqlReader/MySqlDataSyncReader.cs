@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DataSync.Core;
 
 namespace DataSync.MySqlReader
@@ -7,5 +8,10 @@ namespace DataSync.MySqlReader
         public string Name => "mysql";
         
         
+        
+        public List<Dictionary<string, object>> GetData()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace DataSync.Core
 {
     /// <summary>
@@ -10,6 +12,8 @@ namespace DataSync.Core
         public string User { get; set; }
         public string Password { get; set; }
         public string Database { get; set; }
+        
+      
 
         public abstract string BuildConnectionString();
     }

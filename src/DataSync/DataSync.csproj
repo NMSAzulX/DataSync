@@ -12,6 +12,8 @@
         <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
         <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+        <PackageReference Include="MySqlConnector" Version="0.56.0" />
+        <PackageReference Include="Dapper" Version="1.60.6" />
     </ItemGroup>
 
     <ItemGroup>
