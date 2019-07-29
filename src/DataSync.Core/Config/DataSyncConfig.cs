@@ -10,11 +10,6 @@ namespace DataSync.Core.Config
         public string Version { get; set; }
 
         /// <summary>
-        /// 并行任务数
-        /// </summary>
-        public int Concurrent { get; set; }
-
-        /// <summary>
         /// 配置任务
         /// </summary>
         public List<SyncConfig> Sync { get; set; }

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DataSync.Core
 {
     public interface IDataSyncReader
-        // : IEnumerable<Dictionary<string, object>>
     {
         string Name { get; }
 
-        List<Dictionary<string, object>> GetData();
+        Task RunAsync();
     }
 }

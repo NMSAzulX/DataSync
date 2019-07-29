@@ -18,5 +18,14 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DataSync.Core\DataSync.Core.csproj" />
+      <ProjectReference Include="..\DataSync.CsvWriter\DataSync.CsvWriter.csproj" />
+      <ProjectReference Include="..\DataSync.MySqlReader\DataSync.MySqlReader.csproj" />
+      <ProjectReference Include="..\DataSync.MySqlWriter\DataSync.MySqlWriter.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="sample.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 </Project>

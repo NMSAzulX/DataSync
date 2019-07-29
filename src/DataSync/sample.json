@@ -1,15 +1,14 @@
 {
   "version": "1.0",
-  "concurrent": 1,
   "sync": [
     {
       "reader": {
         "type": "mysql",
-        "host": "locahost",
+        "host": "localhost",
         "port": 3306,
         "user": "root",
         "password": "1qazZAQ!",
-        "database": "data",
+        "database": "cnblogs",
         "table": [
           {
             "name": "news",

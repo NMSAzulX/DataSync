@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.IO;
 using System.Threading.Tasks;
-using Dapper;
 using DataSync.Core;
-using Microsoft.Extensions.Hosting;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Serilog;
 using Serilog.Events;
 
@@ -29,17 +23,24 @@ namespace DataSync
                 .RollingFile("datasync.log");
             Log.Logger = configure.CreateLogger();
 
- 
-            if (args.Length < 1)
-            {
-                Console.WriteLine("Use datasync [x.json]");
-                return;
-            }
 
-            if (!File.Exists(args[0]))
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development" && args.Length == 0)
             {
-                Console.WriteLine($"File {args[0]} not found");
-                return;
+                args = new[] {"sample.json"};
+            }
+            else
+            {
+                if (args.Length < 1)
+                {
+                    Console.WriteLine("Use datasync [x.json]");
+                    return;
+                }
+
+                if (!File.Exists(args[0]))
+                {
+                    Console.WriteLine($"File {args[0]} not found");
+                    return;
+                }
             }
 
             SyncFlow flow = new SyncFlow();
