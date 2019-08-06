@@ -17,6 +17,10 @@ EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.CsvWriter", "src\DataSync.CsvWriter\DataSync.CsvWriter.csproj", "{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.Common", "src\DataSync.Common\DataSync.Common.csproj", "{DF9E456B-9181-4566-B4AC-2DFB6B0E92A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.RDBMS.Util", "src\DataSync.RDBMS.Util\DataSync.RDBMS.Util.csproj", "{CEB99524-AD4B-4568-B03A-3B16966688A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{780673C7-7F81-4695-9F6F-CDEC4CC87A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF9E456B-9181-4566-B4AC-2DFB6B0E92A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9E456B-9181-4566-B4AC-2DFB6B0E92A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9E456B-9181-4566-B4AC-2DFB6B0E92A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9E456B-9181-4566-B4AC-2DFB6B0E92A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB99524-AD4B-4568-B03A-3B16966688A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB99524-AD4B-4568-B03A-3B16966688A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB99524-AD4B-4568-B03A-3B16966688A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB99524-AD4B-4568-B03A-3B16966688A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5034E77F-525C-4BDD-A689-67A07F3BDAFF} = {1BD4ECB6-926F-4BE6-A9C0-506AF59A37C7}

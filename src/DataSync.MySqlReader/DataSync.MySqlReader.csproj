@@ -5,7 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DataSync.Common\DataSync.Common.csproj" />
       <ProjectReference Include="..\DataSync.Core\DataSync.Core.csproj" />
+      <ProjectReference Include="..\DataSync.RDBMS.Util\DataSync.RDBMS.Util.csproj" />
     </ItemGroup>
 
     <ItemGroup>
