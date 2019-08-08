@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using DataSync.Core;
 using Serilog;
 using Serilog.Events;
@@ -7,13 +8,13 @@ namespace DataSync
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var configure = new LoggerConfiguration()
 #if DEBUG
                 .MinimumLevel.Verbose()
 #else
-						.MinimumLevel.Information()
+				.MinimumLevel.Information()
 #endif
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .Enrich.FromLogContext()
@@ -23,7 +24,8 @@ namespace DataSync
 
             try
             {
-                Engine.Entry(args);
+                args = new[] {"sample.json"};
+                await Engine.Entry(args);
             }
             catch (Exception e)
             {

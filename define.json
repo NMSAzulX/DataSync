@@ -1,32 +1,17 @@
 {
   "version": "1.0",
-  "concurrent": 1,
+  "concurrent": 5,
   "sync": [
     {
       "reader": {
         "type": "mysql",
-        "host": "locahost",
-        "port": 3306,
-        "user": "root",
-        "password": "1qazZAQ!",
-        "database": "data",
-        "table": [
-          {
-            "name": "news",
-            "splitPk": "id",
-            "where": "",
-            "column": [
-              "id",
-              "title"
-            ]
-          }
-        ],
-        "sql": []
+        "connectionString": "Database='mysql';Data Source=localhost;password=1qazZAQ!;User ID=root;Port=3306;",
+        "database": "data"
       },
       "writer": {
-        "type": "csv",
-        "encoding": "utf-8",
-        "folder": "/storage/var/lib/datasync/zhaoshu"
+        "type": "mysql",
+        "connectionString": "Database='mysql';Data Source=localhost;password=AABBCCDDEE;User ID=root;Port=3307;",
+        "database": "data2"
       }
     }
   ]
